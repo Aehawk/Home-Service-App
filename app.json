@@ -30,6 +30,12 @@
     },
     "plugins": [
       "expo-font"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "da137ec3-4901-4194-98d0-9348d666cf75"
+      }
+    },
+    "owner": "aehawk"
   }
 }
