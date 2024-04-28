@@ -7,7 +7,7 @@ import BusinessList from './BusinessList'
 
 export default function HomeScreen() {
     return (
-        <ScrollView>
+        <View>
             {/* Header */}
             <Header />
             <View style={{ padding: 20 }}>
@@ -19,6 +19,6 @@ export default function HomeScreen() {
                 <BusinessList />
             </View>
 
-        </ScrollView>
+        </View>
     )
 }

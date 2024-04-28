@@ -1,5 +1,6 @@
 {
   "expo": {
+    "scheme": "com.aehawk.homeserviceapp",
     "name": "home-service-app",
     "slug": "home-service-app",
     "version": "1.0.0",
