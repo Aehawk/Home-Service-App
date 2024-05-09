@@ -23,16 +23,16 @@ export default function BusinessListItem({ business, booking }) {
                             <Entypo name="location-pin" size={24} color={Colors.PRIMARY} />
                             {business.address}
                         </Text>
-                        : <Text style={[{ padding: 5, borderRadius: 5, fontSize: 14, alignSelf: 'flex-start' },
-                            booking?.bookingStatus == 'Completed'
-                                ? { backgroundColor: Colors.LIGHT_GREEN, color: Colors.GREEN }
-                                : null,
-                            booking?.bookingStatus == 'Cancelled'
-                                ? { backgroundColor: Colors.LIGHT_RED, color: Colors.RED }
-                                : null,
-                            { color: Colors.PRIMARY, backgroundColor: Colors.PRIMARY_LIGHT }]}>
-                                {booking?.bookingStatus}
-                            </Text>
+                        : <Text style={[{ padding: 5, borderRadius: 5, fontSize: 14, alignSelf: 'flex-start', color: Colors.PRIMARY, backgroundColor: Colors.PRIMARY_LIGHT },
+                        booking?.bookingStatus == 'Completed'
+                            ? { backgroundColor: Colors.GREEN, color: Colors.WHITE }
+                            : null,
+                        booking?.bookingStatus == 'Cancelled'
+                            ? { backgroundColor: Colors.RED, color: Colors.WHITE }
+                            : null,
+                        ]}>
+                            {booking?.bookingStatus}
+                        </Text>
                 }
 
                 {
