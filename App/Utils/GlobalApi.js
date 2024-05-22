@@ -100,7 +100,7 @@ const createBooking = async (data) => {
       count
     }
   }
-  `
+`
   const result = await request(MASTER_URL, mutationQuery);
   return result;
 }
@@ -108,28 +108,28 @@ const createBooking = async (data) => {
 const getUserBookings = async (userEmail) => {
   const query = gql`
   query GetUserBookings {
-    bookings(orderBy: updatedAt_DESC,
-      where: {userEmail: "`+ userEmail + `"}) {
-        date
-        time
-        userEmail
-        userName
-        bookingStatus
-        id
+  bookings(orderBy: updatedAt_DESC,
+    where: {userEmail: "`+ userEmail + `"}) {
+    date
+    time
+    userEmail
+    userName
+    bookingStatus
+    id
         businessList {
-          id
+      id
           images {
-            url
-          }
-          name
-          address
-          contactPerson
-          email
-          about
-        }
+        url
+      }
+      name
+      address
+      contactPerson
+      email
+      about
     }
   }
-  `
+}
+`
   const result = await request(MASTER_URL, query);
   return result;
 }

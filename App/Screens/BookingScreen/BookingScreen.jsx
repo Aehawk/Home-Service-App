@@ -17,7 +17,6 @@ export default function BookingScreen() {
   const getUserBookings = () => {
     setLoading(true);
     GlobalApi.getUserBookings(user.primaryEmailAddress.emailAddress).then(resp => {
-      console.log(resp);
       setBookingList(resp.bookings);
       setLoading(false);
     })
