@@ -110,6 +110,7 @@ const getUserBookings = async (userEmail) => {
   query GetUserBookings {
     bookings(orderBy: updatedAt_DESC,
       where: {userEmail: "`+ userEmail + `"}) {
+        date
         time
         userEmail
         userName

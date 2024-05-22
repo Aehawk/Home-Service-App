@@ -7,6 +7,7 @@ import { AntDesign } from '@expo/vector-icons';
 
 export default function BusinessListItem({ business, booking }) {
     const navigation = useNavigation();
+
     return (
         <TouchableOpacity style={styles.container} onPress={() => navigation.push('business-details', { business: business })}>
             <Image source={{ uri: business?.images[0]?.url }}

@@ -6,6 +6,7 @@ import Colors from '../../Utils/Colors';
 import Heading from '../../Components/Heading';
 import GlobalApi from '../../Utils/GlobalApi';
 import { useUser } from '@clerk/clerk-expo';
+import moment from 'moment';
 
 export default function BookingModel({ businessId, hideModal }) {
 
@@ -49,7 +50,7 @@ export default function BookingModel({ businessId, hideModal }) {
             userName: user?.fullName,
             userEmail: user?.primaryEmailAddress.emailAddress,
             time: selectedTime,
-            date: selectedDate,
+            date: moment(selectedDate).format('DD-MMM-yyyy'),
             businessId: businessId,
         }
         GlobalApi.createBooking(data).then(resp => {
